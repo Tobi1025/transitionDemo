@@ -5,7 +5,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+
+import java.net.Socket;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,20 +20,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        ImageView iv_cover_image = (ImageView) findViewById(R.id.iv_cover_image);
-        iv_cover_image.setOnClickListener(new View.OnClickListener() {
+        Button btn_jump = (Button) findViewById(R.id.btn_jump);
+        btn_jump.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent detailIntent = new Intent(MainActivity.this,DetailActivity.class);
+                Intent detailIntent = new Intent(MainActivity.this, DetailActivity.class);
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
                     ActivityOptions options =
                             ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, view, getString(R.string.image_transition_name));
                     startActivity(detailIntent, options.toBundle());
-                }else {
+                } else {
                     startActivity(detailIntent);
                 }
-
-
             }
         });
     }
