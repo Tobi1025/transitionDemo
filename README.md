@@ -8,5 +8,5 @@ ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this, vie
 Intent intent = new Intent(this, DetailActivity.class);
 startActivity(intent, optionsCompat.toBundle());
 * 在第二个界面中找到共享元素，设置transitionName
-##至此，过渡动画已经完成，在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
+## 至此，过渡动画已经完成，在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
 * 邮件(qiaojingfei2@163.com)
