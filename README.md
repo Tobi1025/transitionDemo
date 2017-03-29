@@ -1,5 +1,5 @@
 # transitionDemo
-##访网易云音乐转场动画
+## 访网易云音乐转场动画
 * 5.0以上才有的
 * 转场动画是在两个界面的跳转返回时发生的，所以，当使用 intent 跳转界面时，需要调用 ActivityOptionsCompat来指定动画的运行。
     *  // 创建一个包含过渡动画信息的 ActivityOptions 对象
